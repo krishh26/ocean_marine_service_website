@@ -1,8 +1,256 @@
 .footer {
-  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-color) 100%);
+  position: relative;
   color: var(--white);
-  padding: 3rem 0 1rem;
+  padding: 0;
   margin-top: 4rem;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* 3D Ocean Background */
+.ocean-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Deep Ocean Layer */
+.ocean-deep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    #001f3f 0%,
+    #003d7a 25%,
+    #0056b3 50%,
+    #0066cc 75%,
+    #0077e6 100%
+  );
+  box-shadow: inset 0 -50px 100px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated Waves */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 100px;
+  background-repeat: repeat-x;
+  animation: wave-animation 15s linear infinite;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.wave1 {
+  bottom: 30%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 119, 230, 0.6) 50%,
+    rgba(0, 102, 204, 0.8) 100%
+  );
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  animation-duration: 12s;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.wave2 {
+  bottom: 25%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 86, 179, 0.5) 50%,
+    rgba(0, 119, 230, 0.7) 100%
+  );
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  animation-duration: 18s;
+  animation-direction: reverse;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 80px;
+}
+
+.wave3 {
+  bottom: 20%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 61, 122, 0.4) 50%,
+    rgba(0, 86, 179, 0.6) 100%
+  );
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  animation-duration: 20s;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 60px;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(-50%) translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) scaleY(1.1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) scaleY(1);
+  }
+}
+
+/* Sand/Beach Layer */
+.sand-beach {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(
+    to top,
+    #8b7355 0%,
+    #a0826d 20%,
+    #b8956f 40%,
+    #c9a882 60%,
+    #d4b896 80%,
+    #e5d4b8 100%
+  );
+  box-shadow: 
+    inset 0 20px 40px rgba(139, 115, 85, 0.5),
+    0 -10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  clip-path: polygon(
+    0% 0%,
+    5% 2%,
+    10% 0%,
+    15% 3%,
+    20% 1%,
+    25% 2%,
+    30% 0%,
+    35% 3%,
+    40% 1%,
+    45% 2%,
+    50% 0%,
+    55% 3%,
+    60% 1%,
+    65% 2%,
+    70% 0%,
+    75% 3%,
+    80% 1%,
+    85% 2%,
+    90% 0%,
+    95% 3%,
+    100% 1%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+/* Floating Bubbles */
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: bubble-float 8s infinite ease-in-out;
+  box-shadow: 
+    inset 0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.bubble1 {
+  width: 20px;
+  height: 20px;
+  left: 10%;
+  bottom: 25%;
+  animation-delay: 0s;
+  animation-duration: 6s;
+}
+
+.bubble2 {
+  width: 30px;
+  height: 30px;
+  left: 30%;
+  bottom: 35%;
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+
+.bubble3 {
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  bottom: 30%;
+  animation-delay: 2s;
+  animation-duration: 7s;
+}
+
+.bubble4 {
+  width: 25px;
+  height: 25px;
+  left: 70%;
+  bottom: 40%;
+  animation-delay: 1.5s;
+  animation-duration: 9s;
+}
+
+.bubble5 {
+  width: 18px;
+  height: 18px;
+  left: 85%;
+  bottom: 28%;
+  animation-delay: 0.5s;
+  animation-duration: 6.5s;
+}
+
+.bubble6 {
+  width: 22px;
+  height: 22px;
+  left: 60%;
+  bottom: 45%;
+  animation-delay: 2.5s;
+  animation-duration: 7.5s;
+}
+
+@keyframes bubble-float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-200px) translateX(-10px);
+    opacity: 0;
+  }
+}
+
+/* Content Wrapper */
+.footer-content-wrapper {
+  position: relative;
+  z-index: 10;
+  padding: 3rem 0 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 31, 63, 0.3) 0%,
+    rgba(0, 31, 63, 0.5) 50%,
+    rgba(139, 115, 85, 0.4) 100%
+  );
 }
 
 .footer-content {
@@ -12,21 +260,29 @@
   margin-bottom: 2rem;
 }
 
+.footer-section {
+  position: relative;
+  z-index: 11;
+}
+
 .footer-section h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: var(--accent, #ffd700);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .footer-section h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: var(--accent, #ffd700);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .footer-section p {
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .footer-section ul {
@@ -38,25 +294,53 @@
 }
 
 .footer-section ul li a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .footer-section ul li a:hover {
-  color: var(--accent);
+  color: var(--accent, #ffd700);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 11;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    min-height: 350px;
+  }
+  
+  .wave {
+    height: 60px;
+  }
+  
+  .wave2 {
+    height: 50px;
+  }
+  
+  .wave3 {
+    height: 40px;
+  }
+  
+  .sand-beach {
+    height: 25%;
+  }
 }
 

@@ -1,10 +1,18 @@
 <section class="hero">
+  <div class="hero-3d-background">
+    <div class="floating-ship ship1">🚢</div>
+    <div class="floating-ship ship2">⛵</div>
+    <div class="floating-ship ship3">🛳️</div>
+    <div class="ocean-depth"></div>
+  </div>
   <div class="hero-content">
-    <h1 class="hero-title">Navigate the Seas with Confidence</h1>
+    <div class="hero-3d-title">
+      <h1 class="hero-title">Navigate the Seas with Confidence</h1>
+    </div>
     <p class="hero-subtitle">Premier marine services for vessels, cargo, and port operations</p>
     <div class="hero-buttons">
-      <a routerLink="/services" class="btn btn-primary">Our Services</a>
-      <a routerLink="/contact" class="btn btn-secondary">Get in Touch</a>
+      <a routerLink="/services" class="btn btn-primary btn-3d">Our Services</a>
+      <a routerLink="/contact" class="btn btn-secondary btn-3d">Get in Touch</a>
     </div>
   </div>
   <div class="hero-wave">
@@ -18,11 +26,20 @@
   <div class="container">
     <h2 class="section-title">Our Services</h2>
     <p class="section-subtitle">Comprehensive marine solutions tailored to your needs</p>
-    <div class="services-grid">
-      <div class="service-card" *ngFor="let service of services">
-        <div class="service-icon">{{ service.icon }}</div>
-        <h3>{{ service.title }}</h3>
-        <p>{{ service.description }}</p>
+    <div class="services-grid-3d">
+      <div class="service-card-3d" *ngFor="let service of services; let i = index" [style.animation-delay]="i * 0.1 + 's'">
+        <div class="card-3d-inner">
+          <div class="card-3d-front">
+            <div class="service-icon-3d">{{ service.icon }}</div>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+          <div class="card-3d-back">
+            <div class="service-icon-3d">{{ service.icon }}</div>
+            <h3>{{ service.title }}</h3>
+            <p>Learn more about our {{ service.title.toLowerCase() }} services</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="text-center">
@@ -46,8 +63,22 @@
         <a routerLink="/about" class="btn btn-primary">Learn More</a>
       </div>
       <div class="why-image">
-        <div class="image-placeholder">
-          <span class="placeholder-icon">🌊</span>
+        <div class="image-3d-container">
+          <div class="image-3d-box">
+            <div class="image-3d-face image-3d-front">
+              <div class="ocean-scene">
+                <div class="wave-3d wave-3d-1"></div>
+                <div class="wave-3d wave-3d-2"></div>
+                <div class="wave-3d wave-3d-3"></div>
+                <div class="sun-3d">☀️</div>
+              </div>
+            </div>
+            <div class="image-3d-face image-3d-back"></div>
+            <div class="image-3d-face image-3d-right"></div>
+            <div class="image-3d-face image-3d-left"></div>
+            <div class="image-3d-face image-3d-top"></div>
+            <div class="image-3d-face image-3d-bottom"></div>
+          </div>
         </div>
       </div>
     </div>
