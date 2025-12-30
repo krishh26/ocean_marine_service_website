@@ -1,0 +1,64 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Navigate the Seas with Confidence</h1>
+    <p class="hero-subtitle">Premier marine services for vessels, cargo, and port operations</p>
+    <div class="hero-buttons">
+      <a routerLink="/services" class="btn btn-primary">Our Services</a>
+      <a routerLink="/contact" class="btn btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z" fill="var(--light-blue)"></path>
+    </svg>
+  </div>
+</section>
+
+<section class="services-preview">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Comprehensive marine solutions tailored to your needs</p>
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <a routerLink="/services" class="btn btn-outline">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-us">
+  <div class="container">
+    <div class="why-content">
+      <div class="why-text">
+        <h2>Why Choose Ocean Marine?</h2>
+        <ul class="features-list">
+          <li>✓ 20+ Years of Industry Experience</li>
+          <li>✓ 24/7 Support & Emergency Services</li>
+          <li>✓ Certified & Licensed Professionals</li>
+          <li>✓ Global Network & Partnerships</li>
+          <li>✓ Environmentally Responsible Practices</li>
+        </ul>
+        <a routerLink="/about" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="why-image">
+        <div class="image-placeholder">
+          <span class="placeholder-icon">🌊</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Set Sail?</h2>
+    <p>Contact us today to discuss your marine service needs</p>
+    <a routerLink="/contact" class="btn btn-white">Contact Us Now</a>
+  </div>
+</section>
+
