@@ -9,6 +9,21 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+  galleryImages = [
+    {
+      src: 'assets/image/pexels-nik-oak-173187900-12898407.jpg',
+      alt: 'Cargo vessel at sea'
+    },
+    {
+      src: 'assets/image/pexels-robertkso-34127257.jpg',
+      alt: 'Port operations at sunset'
+    },
+    {
+      src: 'assets/image/360_F_630151114_rdKzRM6OBt6Wjg5Gr9ET8CS47buICxgN.jpg',
+      alt: 'Marine logistics overview'
+    }
+  ];
+
   values = [
     {
       icon: '🎯',

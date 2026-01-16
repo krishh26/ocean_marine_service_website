@@ -22,19 +22,19 @@ export class ContactComponent {
     {
       icon: '📧',
       title: 'Email',
-      content: 'info@oceanmarine.com',
-      link: 'mailto:info@oceanmarine.com'
+      content: 'info@oceanmarineservice.co.in',
+      link: 'mailto:info@oceanmarineservice.co.in'
     },
     {
       icon: '📞',
       title: 'Phone',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      content: '+91 8490878682 / +91 7285009292',
+      link: 'tel:+918490878682'
     },
     {
       icon: '📍',
       title: 'Address',
-      content: '123 Harbor Drive, Port City, PC 12345',
+      content: 'Ground Floor, Plot no.333/F, Victoria Pool Road, Jamnagar, Gujarat - 361007',
       link: '#'
     },
     {

@@ -43,7 +43,7 @@
                 id="phone"
                 name="phone"
                 [(ngModel)]="contactForm.phone"
-                placeholder="+1 (555) 123-4567"
+                placeholder=" +91 8490878682 /+91 7285009292"
               >
             </div>
 
@@ -79,6 +79,10 @@
           <h2>Contact Information</h2>
           <p class="info-intro">Reach out to us through any of these channels. We're always ready to assist you.</p>
 
+          <div class="contact-side-image">
+            <img src="assets/image/pexels-nik-oak-173187900-12898407 (1).jpg" alt="Harbor support team">
+          </div>
+
           <div class="contact-info-list">
             <div class="contact-info-item" *ngFor="let info of contactInfo">
               <div class="info-icon">{{ info.icon }}</div>
@@ -92,10 +96,11 @@
           </div>
 
           <div class="map-placeholder">
+            <img src="assets/image/pexels-kuntum-kuro-701395675-18115096.jpg" alt="Harbor location map">
             <div class="map-content">
-              <span class="map-icon">🗺️</span>
-              <p>Interactive Map</p>
-              <small>123 Harbor Drive, Port City</small>
+              <p>Port City Operations</p>
+              <small>Ground Floor, Plot no.333/F, Victoria Pool Road,
+Jamnagar, Gujarat - 361007</small>
             </div>
           </div>
         </div>

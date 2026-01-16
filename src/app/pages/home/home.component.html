@@ -1,85 +1,106 @@
-<section class="hero">
-  <div class="hero-3d-background">
-    <div class="floating-ship ship1">🚢</div>
-    <div class="floating-ship ship2">⛵</div>
-    <div class="floating-ship ship3">🛳️</div>
-    <div class="ocean-depth"></div>
-  </div>
-  <div class="hero-content">
-    <div class="hero-3d-title">
-      <h1 class="hero-title">Navigate the Seas with Confidence</h1>
-    </div>
-    <p class="hero-subtitle">Premier marine services for vessels, cargo, and port operations</p>
-    <div class="hero-buttons">
-      <a routerLink="/services" class="btn btn-primary btn-3d">Our Services</a>
-      <a routerLink="/contact" class="btn btn-secondary btn-3d">Get in Touch</a>
-    </div>
-  </div>
-  <div class="hero-wave">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z" fill="var(--light-blue)"></path>
-    </svg>
-  </div>
-</section>
-
-<section class="services-preview">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-subtitle">Comprehensive marine solutions tailored to your needs</p>
-    <div class="services-grid-3d">
-      <div class="service-card-3d" *ngFor="let service of services; let i = index" [style.animation-delay]="i * 0.1 + 's'">
-        <div class="card-3d-inner">
-          <div class="card-3d-front">
-            <div class="service-icon-3d">{{ service.icon }}</div>
-            <h3>{{ service.title }}</h3>
-            <p>{{ service.description }}</p>
-          </div>
-          <div class="card-3d-back">
-            <div class="service-icon-3d">{{ service.icon }}</div>
-            <h3>{{ service.title }}</h3>
-            <p>Learn more about our {{ service.title.toLowerCase() }} services</p>
+<section class="hero-carousel">
+  <div class="carousel">
+    <div class="carousel-slides">
+      <div
+        class="carousel-slide"
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === activeSlide"
+      >
+        <img [src]="slide.image" [alt]="slide.title">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <p class="eyebrow">{{ slide.eyebrow }}</p>
+          <h1>{{ slide.title }}</h1>
+          <p class="subtitle">{{ slide.subtitle }}</p>
+          <div class="hero-actions">
+            <a [routerLink]="slide.primaryLink" class="btn btn-primary">{{ slide.primaryCta }}</a>
+            <a [routerLink]="slide.secondaryLink" class="btn btn-secondary">{{ slide.secondaryCta }}</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="text-center">
+    <button class="carousel-control prev" type="button" aria-label="Previous slide" (click)="prevSlide()">
+      ‹
+    </button>
+    <button class="carousel-control next" type="button" aria-label="Next slide" (click)="nextSlide()">
+      ›
+    </button>
+    <div class="carousel-dots">
+      <button
+        *ngFor="let slide of slides; let i = index"
+        type="button"
+        class="dot"
+        [class.active]="i === activeSlide"
+        [attr.aria-label]="'Go to slide ' + (i + 1)"
+        (click)="goToSlide(i)"
+      ></button>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="container stats-grid">
+    <div class="stat-item" *ngFor="let stat of stats">
+      <div class="stat-value">{{ stat.value }}</div>
+      <div class="stat-label">{{ stat.label }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Our Services</p>
+      <h2>End-to-end marine support</h2>
+      <p class="section-subtitle">Operational coverage built around safety, efficiency, and reliability.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+    <div class="section-cta">
       <a routerLink="/services" class="btn btn-outline">View All Services</a>
     </div>
   </div>
 </section>
 
-<section class="why-choose-us">
+<section class="operations-section">
+  <div class="container operations-grid">
+    <div class="operations-content">
+      <p class="eyebrow">Operational Excellence</p>
+      <h2>Built for safety, compliance, and performance</h2>
+      <p class="section-subtitle">
+        Our teams align with international maritime regulations and deliver disciplined execution at every
+        touchpoint.
+      </p>
+      <ul class="feature-list">
+        <li>ISM, SOLAS, and MARPOL aligned procedures</li>
+        <li>On-site safety audits and risk assessments</li>
+        <li>Dedicated account managers for every client</li>
+        <li>Transparent reporting and KPI tracking</li>
+      </ul>
+      <a routerLink="/about" class="btn btn-primary">Discover Our Standards</a>
+    </div>
+    <div class="operations-image">
+      <img src="assets/image/pexels-jmhcarriger-35652279.jpg" alt="Marine operations team on deck">
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
   <div class="container">
-    <div class="why-content">
-      <div class="why-text">
-        <h2>Why Choose Ocean Marine?</h2>
-        <ul class="features-list">
-          <li>✓ 20+ Years of Industry Experience</li>
-          <li>✓ 24/7 Support & Emergency Services</li>
-          <li>✓ Certified & Licensed Professionals</li>
-          <li>✓ Global Network & Partnerships</li>
-          <li>✓ Environmentally Responsible Practices</li>
-        </ul>
-        <a routerLink="/about" class="btn btn-primary">Learn More</a>
-      </div>
-      <div class="why-image">
-        <div class="image-3d-container">
-          <div class="image-3d-box">
-            <div class="image-3d-face image-3d-front">
-              <div class="ocean-scene">
-                <div class="wave-3d wave-3d-1"></div>
-                <div class="wave-3d wave-3d-2"></div>
-                <div class="wave-3d wave-3d-3"></div>
-                <div class="sun-3d">☀️</div>
-              </div>
-            </div>
-            <div class="image-3d-face image-3d-back"></div>
-            <div class="image-3d-face image-3d-right"></div>
-            <div class="image-3d-face image-3d-left"></div>
-            <div class="image-3d-face image-3d-top"></div>
-            <div class="image-3d-face image-3d-bottom"></div>
-          </div>
-        </div>
+    <div class="section-header">
+      <p class="eyebrow">Client Feedback</p>
+      <h2>Trusted by shipping leaders</h2>
+      <p class="section-subtitle">Long-term partnerships built on consistent delivery and clear communication.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <p class="testimonial-quote">“{{ testimonial.quote }}”</p>
+        <p class="testimonial-name">{{ testimonial.name }}</p>
+        <p class="testimonial-company">{{ testimonial.company }}</p>
       </div>
     </div>
   </div>
@@ -87,8 +108,8 @@
 
 <section class="cta-section">
   <div class="container">
-    <h2>Ready to Set Sail?</h2>
-    <p>Contact us today to discuss your marine service needs</p>
+    <h2>Ready to plan your next operation?</h2>
+    <p>Talk to our team for a tailored marine service proposal.</p>
     <a routerLink="/contact" class="btn btn-white">Contact Us Now</a>
   </div>
 </section>
