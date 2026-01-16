@@ -33,7 +33,9 @@
 }
 
 .logo-icon {
-  font-size: 2rem;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-menu {
