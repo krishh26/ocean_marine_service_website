@@ -1,30 +1,32 @@
-<section class="hero-carousel">
-  <div class="carousel">
-    <div class="carousel-slides">
-      <div
-        class="carousel-slide"
-        *ngFor="let slide of slides; let i = index"
-        [class.active]="i === activeSlide"
-      >
-        <img [src]="slide.image" [alt]="slide.title">
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <p class="eyebrow">{{ slide.eyebrow }}</p>
-          <h1>{{ slide.title }}</h1>
-          <p class="subtitle">{{ slide.subtitle }}</p>
-          <div class="hero-actions">
-            <a [routerLink]="slide.primaryLink" class="btn btn-primary">{{ slide.primaryCta }}</a>
-            <a [routerLink]="slide.secondaryLink" class="btn btn-secondary">{{ slide.secondaryCta }}</a>
-          </div>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-background">
+    <div class="carousel">
+      <div class="carousel-slides">
+        <div
+          class="carousel-slide"
+          *ngFor="let slide of slides; let i = index"
+          [class.active]="i === activeSlide"
+        >
+          <img [src]="slide.image" [alt]="slide.title">
+          <div class="slide-overlay"></div>
         </div>
       </div>
     </div>
-    <button class="carousel-control prev" type="button" aria-label="Previous slide" (click)="prevSlide()">
-      ‹
-    </button>
-    <button class="carousel-control next" type="button" aria-label="Next slide" (click)="nextSlide()">
-      ›
-    </button>
+  </div>
+  <div class="hero-content">
+    <div class="container">
+      <h1 class="hero-title">Marine & Hull Surveyors<br>Consultants | Engineers<br>Dry Cargo & Bulk Oil Inspectors<br>Samplers & Analyst</h1>
+      <div class="hero-taglines">
+        <h2 class="tagline-main">Always Trusted</h2>
+        <h2 class="tagline-main">Always Capable</h2>
+        <p class="tagline-sub">Our Work Quality is Unparalleled</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-control prev" type="button" aria-label="Previous slide" (click)="prevSlide()">‹</button>
+    <button class="carousel-control next" type="button" aria-label="Next slide" (click)="nextSlide()">›</button>
     <div class="carousel-dots">
       <button
         *ngFor="let slide of slides; let i = index"
@@ -38,79 +40,94 @@
   </div>
 </section>
 
-<section class="stats-bar">
-  <div class="container stats-grid">
-    <div class="stat-item" *ngFor="let stat of stats">
-      <div class="stat-value">{{ stat.value }}</div>
-      <div class="stat-label">{{ stat.label }}</div>
+<!-- Welcome Section -->
+<section class="welcome-section">
+  <div class="container">
+    <h2 class="section-title">Welcome To Our Company...!</h2>
+    <div class="welcome-grid">
+      <div class="welcome-card">
+        <h3>Mission</h3>
+        <p>To exceed our customers expectation on every assignment as their service providers, bearing in mind the ethics and principles of independent marine surveying and consultancy.</p>
+      </div>
+      <div class="welcome-card">
+        <h3>Vision</h3>
+        <p>With our Consistent Quality and Ethical working system, we aim to be the most reputed and preferred Marine Survey firm in the Indian sub-continent, for specialized Maritime Survey activities.</p>
+      </div>
+      <div class="welcome-card">
+        <h3>Core Values</h3>
+        <p>Build trust of clients with High Quality Survey services. Aspire for excellence in our Survey and Reporting. Honesty, Integrity and Continual Self improvement.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- About Us Section -->
+<section class="about-section">
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+      <p>Ocean Marine Services since its incorporation is engaged in providing value added professional services in the field of Marine Surveying. With her continuous performance Ocean Marine Services has developed into a reputable and reliable Surveying firm in industry.</p>
+      <p>With experience, we noted survey jobs are rendered by unqualified and in experience hands and made services unduly costlier. Ocean Marine Services is a service oriented organisation pioneered with a vision to fill-in the gap by rendering Marine Surveying services with experienced and competent hands at reasonable rates.</p>
+      <a routerLink="/about" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Our Services Section -->
 <section class="services-section">
   <div class="container">
     <div class="section-header">
-      <p class="eyebrow">Our Services</p>
-      <h2>End-to-end marine support</h2>
-      <p class="section-subtitle">Operational coverage built around safety, efficiency, and reliability.</p>
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-intro">Ocean Marine Services is regularly called upon by Ship Owners, Charterers, Cargo Receivers, Shippers, Stevedores and a whole host of other companies involved in Maritime Trade to protect their interests.</p>
+      <p class="section-intro">Ocean Marine Services understands the necessity for competent factual reports to be issued timely. To this end, Ocean Marine Services employs well experienced, qualified and competent persons and assures full detailed reports are issued within 3 days under normal circumstances. All field staff is adequately equipped with communication tools also enable speedy contact in cases of emergency or urgent update.</p>
     </div>
     <div class="services-grid">
       <div class="service-card" *ngFor="let service of services">
         <h3>{{ service.title }}</h3>
-        <p>{{ service.description }}</p>
+        <a [routerLink]="service.link" class="btn-view-more">View More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Aim Section -->
+<section class="aim-section">
+  <div class="container">
+    <p class="aim-text">Our aim is to continue to be the marine surveying and consultancy firm of choice at West Coast of India, exceeding our client's expectations each and every time.</p>
+    <a routerLink="/contact" class="btn btn-primary">Get In Touch</a>
+  </div>
+</section>
+
+<!-- Valued Principles Section -->
+<section class="principles-section">
+  <div class="container">
+    <h2 class="section-title">Our Valued Principles are</h2>
+    <div class="principles-grid">
+      <div class="principle-item">Shippers</div>
+      <div class="principle-item">Receivers</div>
+      <div class="principle-item">Ship Charterers</div>
+      <div class="principle-item">Ship Owners</div>
+      <div class="principle-item">Ship Agent</div>
+      <div class="principle-item">Cargo Suppliers</div>
+      <div class="principle-item">Clearing Agents</div>
+      <div class="principle-item">Stevedores / Handling Agents</div>
+      <div class="principle-item">Marine Unit builders</div>
+    </div>
+  </div>
+</section>
+
+<!-- Photo Gallery Section -->
+<section class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">Photo Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let image of galleryImages">
+        <img [src]="image" alt="Gallery Image">
       </div>
     </div>
     <div class="section-cta">
-      <a routerLink="/services" class="btn btn-outline">View All Services</a>
+      <a routerLink="/gallery" class="btn btn-outline">View More</a>
     </div>
-  </div>
-</section>
-
-<section class="operations-section">
-  <div class="container operations-grid">
-    <div class="operations-content">
-      <p class="eyebrow">Operational Excellence</p>
-      <h2>Built for safety, compliance, and performance</h2>
-      <p class="section-subtitle">
-        Our teams align with international maritime regulations and deliver disciplined execution at every
-        touchpoint.
-      </p>
-      <ul class="feature-list">
-        <li>ISM, SOLAS, and MARPOL aligned procedures</li>
-        <li>On-site safety audits and risk assessments</li>
-        <li>Dedicated account managers for every client</li>
-        <li>Transparent reporting and KPI tracking</li>
-      </ul>
-      <a routerLink="/about" class="btn btn-primary">Discover Our Standards</a>
-    </div>
-    <div class="operations-image">
-      <img src="assets/image/pexels-jmhcarriger-35652279.jpg" alt="Marine operations team on deck">
-    </div>
-  </div>
-</section>
-
-<section class="testimonials-section">
-  <div class="container">
-    <div class="section-header">
-      <p class="eyebrow">Client Feedback</p>
-      <h2>Trusted by shipping leaders</h2>
-      <p class="section-subtitle">Long-term partnerships built on consistent delivery and clear communication.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
-        <p class="testimonial-quote">“{{ testimonial.quote }}”</p>
-        <p class="testimonial-name">{{ testimonial.name }}</p>
-        <p class="testimonial-company">{{ testimonial.company }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="container">
-    <h2>Ready to plan your next operation?</h2>
-    <p>Talk to our team for a tailored marine service proposal.</p>
-    <a routerLink="/contact" class="btn btn-white">Contact Us Now</a>
   </div>
 </section>
 

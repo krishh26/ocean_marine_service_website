@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  showDropdown = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -18,6 +19,12 @@ export class HeaderComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.showDropdown = false;
+  }
+
+  toggleDropdown(event: Event) {
+    event.preventDefault();
+    this.showDropdown = !this.showDropdown;
   }
 }
 

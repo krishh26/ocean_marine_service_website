@@ -62,29 +62,38 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   services = [
     {
-      title: 'Vessel Maintenance & Repair',
-      description: 'Planned and emergency maintenance programs that keep vessels compliant and mission-ready.'
+      title: 'Marine Surveys',
+      description: 'Professional marine surveying services for vessels, cargo, and maritime operations.',
+      link: '/services'
     },
     {
-      title: 'Port & Cargo Operations',
-      description: 'Safe cargo handling, documentation support, and optimized port turnaround.'
+      title: 'Technical',
+      description: 'Technical support and engineering services for marine operations and maintenance.',
+      link: '/services'
     },
     {
-      title: 'Marine Engineering',
-      description: 'Technical support for inspections, retrofits, and performance improvements.'
+      title: 'Oil Loss Control Superintendent',
+      description: 'Expert supervision and control for oil loss prevention and management.',
+      link: '/services'
     },
     {
-      title: 'Crew & Supply Management',
-      description: 'Crew logistics, provisioning, and procurement to keep operations moving.'
+      title: 'Legal',
+      description: 'Maritime legal consultation and support services.',
+      link: '/services'
     },
     {
-      title: 'Logistics & Freight Forwarding',
-      description: 'End-to-end transport coordination with clear tracking and reporting.'
-    },
-    {
-      title: 'Regulatory Compliance',
-      description: 'Guidance across ISM, SOLAS, MARPOL, and local port regulations.'
+      title: 'Commercial',
+      description: 'Commercial marine services and business solutions.',
+      link: '/services'
     }
+  ];
+
+  galleryImages = [
+    'assets/image/pexels-oleksiy-konstantinidi-2147541276-30049589.jpg',
+    'assets/image/pexels-oleksiy-konstantinidi-2147541276-30306350.jpg',
+    'assets/image/pexels-bahadir-civan-209659-672460.jpg',
+    'assets/image/pexels-izafi-29215512.jpg',
+    'assets/image/pexels-jmhcarriger-35652279.jpg'
   ];
 
   testimonials = [

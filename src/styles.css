@@ -5,14 +5,14 @@
 }
 
 :root {
-  --primary-color: #0066cc;
-  --secondary-color: #00a8e8;
-  --dark-blue: #003d7a;
-  --light-blue: #e6f2ff;
+  --primary-color: #1a4a6b;
+  --secondary-color: #0d3550;
+  --dark-blue: #0d3550;
+  --light-blue: #f8f9fa;
   --white: #ffffff;
   --text-dark: #1a1a1a;
   --text-light: #666666;
-  --accent: #00d4ff;
+  --accent: #1a4a6b;
 }
 
 body {
@@ -20,6 +20,13 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   overflow-x: hidden;
+  padding-top: 0;
+}
+
+/* Account for fixed header */
+app-root {
+  display: block;
+  padding-top: 0;
 }
 
 html {
