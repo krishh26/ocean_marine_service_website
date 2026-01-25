@@ -19,7 +19,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       primaryCta: 'Explore Services',
       primaryLink: '/services',
       secondaryCta: 'Request Support',
-      secondaryLink: '/contact'
+      secondaryLink: '/contact',
+      heroTitle: 'Professional Marine Surveying Services<br>Expert Consultants & Engineers<br>Comprehensive Maritime Solutions',
+      tagline1: 'Trusted Excellence',
+      tagline2: 'Proven Capability',
+      taglineSub: 'Delivering Unmatched Quality in Every Assignment'
     },
     {
       image: 'assets/image/pexels-oleksiy-konstantinidi-2147541276-30306350.jpg',
@@ -29,7 +33,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       primaryCta: 'Our Standards',
       primaryLink: '/about',
       secondaryCta: 'Talk to Experts',
-      secondaryLink: '/contact'
+      secondaryLink: '/contact',
+      heroTitle: 'Safety & Compliance Excellence<br>Certified Marine Professionals<br>Global Standards & Protocols',
+      tagline1: 'Safety First',
+      tagline2: 'Global Standards',
+      taglineSub: 'Certified Teams Ensuring Operational Excellence'
     },
     {
       image: 'assets/image/pexels-bahadir-civan-209659-672460.jpg',
@@ -39,7 +47,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       primaryCta: 'View Capabilities',
       primaryLink: '/services',
       secondaryCta: 'Get a Quote',
-      secondaryLink: '/contact'
+      secondaryLink: '/contact',
+      heroTitle: 'Efficient Port Operations<br>Expert Cargo Handling<br>Streamlined Logistics Solutions',
+      tagline1: 'Efficient Operations',
+      tagline2: 'Timely Delivery',
+      taglineSub: 'Streamlined Logistics for Maximum Efficiency'
     },
     {
       image: 'assets/image/pexels-izafi-29215512.jpg',
@@ -49,7 +61,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       primaryCta: 'Why Choose Us',
       primaryLink: '/about',
       secondaryCta: 'Contact Team',
-      secondaryLink: '/contact'
+      secondaryLink: '/contact',
+      heroTitle: 'Global Maritime Network<br>Trusted Partner Worldwide<br>Coordinated Support Services',
+      tagline1: 'Global Reach',
+      tagline2: 'Trusted Partner',
+      taglineSub: 'Coordinated Support Across Major Trade Routes'
     }
   ];
 

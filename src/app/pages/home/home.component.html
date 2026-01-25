@@ -16,11 +16,11 @@
   </div>
   <div class="hero-content">
     <div class="container">
-      <h1 class="hero-title">Professional Marine Surveying Services<br>Expert Consultants & Engineers<br>Comprehensive Maritime Solutions</h1>
-      <div class="hero-taglines">
-        <h2 class="tagline-main">Trusted Excellence</h2>
-        <h2 class="tagline-main">Proven Capability</h2>
-        <p class="tagline-sub">Delivering Unmatched Quality in Every Assignment</p>
+      <h1 class="hero-title" [innerHTML]="slides[activeSlide].heroTitle"></h1>
+      <div class="hero-taglines" [class.active]="true">
+        <h2 class="tagline-main">{{ slides[activeSlide].tagline1 }}</h2>
+        <h2 class="tagline-main">{{ slides[activeSlide].tagline2 }}</h2>
+        <p class="tagline-sub">{{ slides[activeSlide].taglineSub }}</p>
       </div>
     </div>
   </div>
