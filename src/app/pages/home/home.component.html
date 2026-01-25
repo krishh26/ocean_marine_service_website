@@ -121,7 +121,7 @@
   <div class="container">
     <h2 class="section-title">Photo Gallery</h2>
     <div class="gallery-grid">
-      <div class="gallery-item" *ngFor="let image of galleryImages">
+      <div class="gallery-item" *ngFor="let image of galleryImages; let i = index" (click)="openLightbox(i)">
         <img [src]="image" alt="Gallery Image">
       </div>
     </div>
@@ -131,3 +131,10 @@
   </div>
 </section>
 
+<!-- Lightbox Modal -->
+<div class="lightbox" [class.active]="lightboxActive" (click)="closeLightbox()">
+  <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close lightbox">×</button>
+  <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <img [src]="galleryImages[selectedImageIndex]" alt="Gallery Image" *ngIf="lightboxActive">
+  </div>
+</div>

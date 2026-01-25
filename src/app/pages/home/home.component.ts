@@ -132,6 +132,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   activeSlide = 0;
   private slideInterval?: number;
+  lightboxActive = false;
+  selectedImageIndex = 0;
 
   ngOnInit(): void {
     this.startAutoSlide();
@@ -171,6 +173,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   private resetAutoSlide(): void {
     this.stopAutoSlide();
     this.startAutoSlide();
+  }
+
+  openLightbox(index: number): void {
+    this.selectedImageIndex = index;
+    this.lightboxActive = true;
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+
+  closeLightbox(): void {
+    this.lightboxActive = false;
+    document.body.style.overflow = ''; // Restore scrolling
   }
 }
 
