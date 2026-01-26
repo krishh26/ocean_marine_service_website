@@ -33,20 +33,9 @@
 
       <ul class="nav-menu" [class.active]="isMenuOpen">
         <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
-        <li class="dropdown" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
-          <a routerLink="/services" routerLinkActive="active" (click)="toggleDropdown($event)">
-            Services
-            <span class="dropdown-arrow">▼</span>
-          </a>
-          <ul class="dropdown-menu" [class.show]="showDropdown">
-            <li><a routerLink="/services" (click)="closeMenu()">Marine Surveys</a></li>
-            <li><a routerLink="/services" (click)="closeMenu()">Technical</a></li>
-            <li><a routerLink="/services" (click)="closeMenu()">Oil Loss Control Superintendent</a></li>
-            <li><a routerLink="/services" (click)="closeMenu()">Legal</a></li>
-            <li><a routerLink="/services" (click)="closeMenu()">Commercial</a></li>
-          </ul>
-        </li>
+        <li><a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a></li>
         <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About Us</a></li>
+        <li><a routerLink="/our-reach" routerLinkActive="active" (click)="closeMenu()">Our Reach</a></li>
         <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Inquiry</a></li>
       </ul>
     </div>

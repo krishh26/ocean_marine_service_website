@@ -248,51 +248,56 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .service-card {
   background: #ffffff;
-  border: 2px solid #e0e0e0;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 8px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  min-height: 150px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-left: 4px solid #1a4a6b;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .service-card:hover {
-  border-color: #1a4a6b;
-  box-shadow: 0 5px 20px rgba(26, 74, 107, 0.2);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+  border-left-color: #0d3550;
 }
 
-.service-card h3 {
-  font-size: 1.3rem;
-  color: #1a4a6b;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.btn-view-more {
-  display: inline-block;
-  padding: 0.6rem 1.5rem;
+.service-number {
   background: #1a4a6b;
   color: #ffffff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background 0.3s ease;
-  margin-top: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
-.btn-view-more:hover {
+.service-card:hover .service-number {
   background: #0d3550;
+  transform: scale(1.1);
+}
+
+.service-name {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  flex: 1;
 }
 
 /* Aim Section */

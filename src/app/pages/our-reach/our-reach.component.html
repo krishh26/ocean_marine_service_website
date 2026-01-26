@@ -1,0 +1,45 @@
+<section class="our-reach-page">
+  <div class="page-header">
+    <div class="container">
+      <h1>Our Reach</h1>
+      <p>We undertake various type of survey jobs at all major and minor ports of India</p>
+    </div>
+  </div>
+
+  <div class="reach-content">
+    <div class="container">
+      <div class="intro-text">
+        <p>Ocean Marine Services extends its professional marine surveying services across India's extensive coastline, covering major and minor ports from the west coast to the east coast.</p>
+      </div>
+      
+      <div class="ports-grid">
+        <div class="port-card" *ngFor="let port of ports; let i = index">
+          <div class="port-number">{{ i + 1 }}</div>
+          <div class="port-icon">{{ getPortIcon(port) }}</div>
+          <div class="port-name">{{ port }}</div>
+        </div>
+      </div>
+
+      <div class="coast-sections">
+        <div class="coast-section west-coast">
+          <div class="coast-header">
+            <h3>🌊 West Coast Ports</h3>
+            <span class="port-count">{{ westCoastPorts.length }} Ports</span>
+          </div>
+          <div class="coast-ports">
+            <span class="port-tag" *ngFor="let port of westCoastPorts">{{ port }}</span>
+          </div>
+        </div>
+        <div class="coast-section east-coast">
+          <div class="coast-header">
+            <h3>🌊 East Coast Ports</h3>
+            <span class="port-count">{{ eastCoastPorts.length }} Ports</span>
+          </div>
+          <div class="coast-ports">
+            <span class="port-tag" *ngFor="let port of eastCoastPorts">{{ port }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

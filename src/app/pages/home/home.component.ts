@@ -78,28 +78,33 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   services = [
     {
-      title: 'Marine Surveys',
-      description: 'Professional marine surveying services for vessels, cargo, and maritime operations.',
+      title: 'On-Hire Bunker Survey',
+      description: 'Professional on-hire bunker survey services for accurate fuel quantity measurements.',
       link: '/services'
     },
     {
-      title: 'Technical',
-      description: 'Technical support and engineering services for marine operations and maintenance.',
+      title: 'Draught Survey',
+      description: 'Comprehensive draught surveys for accurate cargo weight determination.',
       link: '/services'
     },
     {
-      title: 'Oil Loss Control Superintendent',
-      description: 'Expert supervision and control for oil loss prevention and management.',
+      title: 'Pre-loading Condition Survey',
+      description: 'Thorough pre-loading condition and tally surveys for steel and project cargo.',
       link: '/services'
     },
     {
-      title: 'Legal',
-      description: 'Maritime legal consultation and support services.',
+      title: 'Container Surveys',
+      description: 'Various types of container surveys to ensure cargo safety and compliance.',
       link: '/services'
     },
     {
-      title: 'Commercial',
-      description: 'Commercial marine services and business solutions.',
+      title: 'Cargo Supervision',
+      description: 'Supervising and monitoring during loading and discharging operations.',
+      link: '/services'
+    },
+    {
+      title: 'Independent Third Party Survey',
+      description: 'Unbiased independent third-party surveys for all maritime operations.',
       link: '/services'
     }
   ];

@@ -57,6 +57,19 @@
   margin-bottom: 1.5rem;
 }
 
+.service-location {
+  background: var(--light-blue);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  margin-top: 2rem;
+}
+
+.service-location strong {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
 .intro-image {
   display: flex;
   justify-content: center;

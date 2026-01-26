@@ -1,0 +1,245 @@
+.our-reach-page {
+  padding-top: 80px;
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.reach-content {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.intro-text {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.ports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.port-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 4px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.port-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(26, 74, 107, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.port-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--secondary-color);
+}
+
+.port-number {
+  background: var(--primary-color);
+  color: var(--white);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.port-card:hover .port-number {
+  background: var(--secondary-color);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.port-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.port-name {
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  font-weight: 600;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.coast-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.coast-section {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--primary-color);
+}
+
+.coast-section.west-coast {
+  border-top-color: #1a4a6b;
+}
+
+.coast-section.east-coast {
+  border-top-color: #0d3550;
+}
+
+.coast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.coast-header h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.port-count {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.coast-ports {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.port-tag {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: var(--text-dark);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.port-tag:hover {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 74, 107, 0.3);
+  border-color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1.1rem;
+  }
+
+  .ports-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .port-card {
+    padding: 1.25rem;
+  }
+
+  .port-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .port-icon {
+    font-size: 1.5rem;
+  }
+
+  .port-name {
+    font-size: 1rem;
+  }
+
+  .coast-sections {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .coast-section {
+    padding: 1.5rem;
+  }
+
+  .coast-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .coast-header h3 {
+    font-size: 1.3rem;
+  }
+}

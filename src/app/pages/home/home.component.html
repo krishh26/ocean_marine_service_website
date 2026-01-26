@@ -82,9 +82,9 @@
       <p class="section-intro">Ocean Marine Services understands the necessity for competent factual reports to be issued timely. To this end, Ocean Marine Services employs well experienced, qualified and competent persons and assures full detailed reports are issued within 3 days under normal circumstances. All field staff is adequately equipped with communication tools also enable speedy contact in cases of emergency or urgent update.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card" *ngFor="let service of services">
-        <h3>{{ service.title }}</h3>
-        <a [routerLink]="service.link" class="btn-view-more">View More</a>
+      <div class="service-card" *ngFor="let service of services; let i = index" [routerLink]="service.link">
+        <div class="service-number">{{ i + 1 }}</div>
+        <div class="service-name">{{ service.title }}</div>
       </div>
     </div>
   </div>
