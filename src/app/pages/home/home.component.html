@@ -121,12 +121,14 @@
   <div class="container">
     <h2 class="section-title">Photo Gallery</h2>
     <div class="gallery-grid">
-      <div class="gallery-item" *ngFor="let image of galleryImages; let i = index" (click)="openLightbox(i)">
+      <div class="gallery-item" *ngFor="let image of displayedImages; let i = index" (click)="openLightbox(getActualImageIndex(i))">
         <img [src]="image" alt="Gallery Image">
       </div>
     </div>
-    <div class="section-cta">
-      <a routerLink="/gallery" class="btn btn-outline">View More</a>
+    <div class="section-cta" *ngIf="galleryImages.length > 8">
+      <button class="btn btn-outline" (click)="toggleGalleryView()">
+        {{ showAllImages ? 'View Less' : 'View More' }}
+      </button>
     </div>
   </div>
 </section>

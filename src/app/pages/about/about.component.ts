@@ -10,19 +10,35 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutComponent {
   galleryImages = [
-    {
-      src: 'assets/image/pexels-nik-oak-173187900-12898407.jpg',
-      alt: 'Cargo vessel at sea'
-    },
-    {
-      src: 'assets/image/pexels-robertkso-34127257.jpg',
-      alt: 'Port operations at sunset'
-    },
-    {
-      src: 'assets/image/360_F_630151114_rdKzRM6OBt6Wjg5Gr9ET8CS47buICxgN.jpg',
-      alt: 'Marine logistics overview'
-    }
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.06 (16).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.06 (20).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (13).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (20).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (21).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (25).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.07 (3).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.07 (7).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.09 (1).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.10 (2).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.10 (4).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.01 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.05 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.10 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.14 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.15 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.17 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.18 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.20 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.23 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.25 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.26 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.27 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.30 PM.jpeg'
   ];
+
+  showAllImages = false;
+  lightboxActive = false;
+  selectedImageIndex = 0;
 
   values = [
     {
@@ -53,5 +69,28 @@ export class AboutComponent {
     { number: '1000+', label: 'Projects Completed' },
     { number: '24/7', label: 'Support Available' }
   ];
+
+  get displayedImages(): string[] {
+    return this.showAllImages ? this.galleryImages : this.galleryImages.slice(0, 8);
+  }
+
+  toggleGalleryView(): void {
+    this.showAllImages = !this.showAllImages;
+  }
+
+  getActualImageIndex(displayIndex: number): number {
+    return displayIndex;
+  }
+
+  openLightbox(index: number): void {
+    this.selectedImageIndex = index;
+    this.lightboxActive = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeLightbox(): void {
+    this.lightboxActive = false;
+    document.body.style.overflow = '';
+  }
 }
 

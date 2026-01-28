@@ -110,11 +110,30 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
   galleryImages = [
-    'assets/image/pexels-oleksiy-konstantinidi-2147541276-30049589.jpg',
-    'assets/image/pexels-oleksiy-konstantinidi-2147541276-30306350.jpg',
-    'assets/image/pexels-bahadir-civan-209659-672460.jpg',
-    'assets/image/pexels-izafi-29215512.jpg',
-    'assets/image/pexels-jmhcarriger-35652279.jpg'
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.06 (16).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.06 (20).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (13).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (20).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (21).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.32.43 (25).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.07 (3).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.07 (7).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.09 (1).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.10 (2).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.10 (4).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.01 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.05 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.10 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.14 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.15 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.17 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.18 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.20 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.23 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.25 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.26 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.27 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.30 PM.jpeg'
   ];
 
   testimonials = [
@@ -139,6 +158,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private slideInterval?: number;
   lightboxActive = false;
   selectedImageIndex = 0;
+  showAllImages = false;
 
   ngOnInit(): void {
     this.startAutoSlide();
@@ -189,6 +209,20 @@ export class HomeComponent implements OnInit, OnDestroy {
   closeLightbox(): void {
     this.lightboxActive = false;
     document.body.style.overflow = ''; // Restore scrolling
+  }
+
+  get displayedImages(): string[] {
+    return this.showAllImages ? this.galleryImages : this.galleryImages.slice(0, 8);
+  }
+
+  toggleGalleryView(): void {
+    this.showAllImages = !this.showAllImages;
+  }
+
+  getActualImageIndex(displayIndex: number): number {
+    // When showing all images, displayIndex matches galleryImages index
+    // When showing only 8, displayIndex (0-7) matches galleryImages index (0-7)
+    return displayIndex;
   }
 }
 
