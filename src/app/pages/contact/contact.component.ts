@@ -38,7 +38,7 @@ export class ContactComponent {
     {
       icon: '📍',
       title: 'Address',
-      content: 'Ground Floor, Plot no.333/F, Victoria Pool Road, Jamnagar, Gujarat - 361007',
+      content: 'Office no.220, MileStone Complex, Near Nagnath Gate, K.v Road, Jamnagar, Gujarat.India-361001',
       link: '#'
     },
     {
