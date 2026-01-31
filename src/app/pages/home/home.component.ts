@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       image: 'assets/image/cargoship/WhatsApp Image 2026-01-30 at 12.05.25 PM.jpeg',
       eyebrow: 'Ocean Marine Services',
       title: 'Reliable marine solutions for every voyage',
-      subtitle: 'Integrated vessel support, port services, and marine logistics delivered with precision.',
+      subtitle: 'Integrated vessel support, port services, and marine operations delivered with precision.',
       primaryCta: 'Explore Services',
       primaryLink: '/services',
       secondaryCta: 'Request Support',
@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       image: 'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.10 (2).jpeg',
       eyebrow: 'Port & Cargo Services',
       title: 'Efficient port turnaround and cargo handling',
-      subtitle: 'Streamlined port logistics that reduce downtime and keep your schedule on track.',
+      subtitle: 'Streamlined port operations that reduce downtime and keep your schedule on track.',
       primaryCta: 'View Capabilities',
       primaryLink: '/services',
       secondaryCta: 'Get a Quote',
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       heroTitle: 'Efficient Port Operations<br>Expert Cargo Handling<br>Streamlined Vessel Service',
       tagline1: 'Efficient Operations',
       tagline2: 'Timely Delivery',
-      taglineSub: 'Streamlined Logistics for Maximum Efficiency'
+      taglineSub: 'Streamlined Operations for Maximum Efficiency'
     },
     {
       image: 'assets/image/pexels-izafi-29215512.jpg',
@@ -147,7 +147,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       quote: 'We rely on Ocean Marine for critical maintenance windows. Always on schedule.',
       name: 'Fleet Manager',
-      company: 'North Sea Logistics'
+      company: 'North Sea Maritime'
     },
     {
       quote: 'Clear communication and dependable service across multiple ports.',
