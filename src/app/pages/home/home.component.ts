@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent implements OnInit, OnDestroy {
   slides = [
     {
-      image: 'assets/image/pexels-oleksiy-konstantinidi-2147541276-30049589.jpg',
+      image: 'assets/image/cargoship/WhatsApp Image 2026-01-30 at 12.05.25 PM.jpeg',
       eyebrow: 'Ocean Marine Services',
       title: 'Reliable marine solutions for every voyage',
       subtitle: 'Integrated vessel support, port services, and marine logistics delivered with precision.',
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       taglineSub: 'Delivering Unmatched Quality in Every Assignment'
     },
     {
-      image: 'assets/image/pexels-oleksiy-konstantinidi-2147541276-30306350.jpg',
+      image: 'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.20 PM.jpeg',
       eyebrow: 'Safety & Compliance',
       title: 'Operational excellence backed by global standards',
       subtitle: 'Safety-first protocols, certified teams, and rigorous compliance across every operation.',
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       taglineSub: 'Certified Teams Ensuring Operational Excellence'
     },
     {
-      image: 'assets/image/pexels-bahadir-civan-209659-672460.jpg',
+      image: 'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.10 (2).jpeg',
       eyebrow: 'Port & Cargo Services',
       title: 'Efficient port turnaround and cargo handling',
       subtitle: 'Streamlined port logistics that reduce downtime and keep your schedule on track.',
@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       primaryLink: '/services',
       secondaryCta: 'Get a Quote',
       secondaryLink: '/contact',
-      heroTitle: 'Efficient Port Operations<br>Expert Cargo Handling<br>Streamlined Logistics Solutions',
+      heroTitle: 'Efficient Port Operations<br>Expert Cargo Handling<br>Streamlined Vessel Service',
       tagline1: 'Efficient Operations',
       tagline2: 'Timely Delivery',
       taglineSub: 'Streamlined Logistics for Maximum Efficiency'
