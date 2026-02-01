@@ -38,7 +38,7 @@ export class ContactComponent {
     {
       icon: '📍',
       title: 'Address',
-      content: 'Office no.220, MileStone Complex, Near Nagnath Gate, K.v Road, Jamnagar, Gujarat.India-361001',
+      content: 'Office no.220, MileStone Complex, Near Nagnath Gate, K.v Road, Jamnagar, Gujarat, India-361001',
       link: '#'
     },
     {
