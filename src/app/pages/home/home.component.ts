@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent implements OnInit, OnDestroy {
   slides = [
     {
-      image: 'assets/image/cargoship/WhatsApp Image 2026-01-30 at 12.05.25 PM.jpeg',
+      image: 'assets/image/cargoship/shutterstock_tanker_Bob63.jpg',
       eyebrow: 'Ocean Marine Services',
       title: 'Reliable marine solutions for every voyage',
       subtitle: 'Integrated vessel support, port services, and marine operations delivered with precision.',
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       taglineSub: 'Delivering Unmatched Quality in Every Assignment'
     },
     {
-      image: 'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.20 PM.jpeg',
+      image: 'assets/image/cargoship/download.jpg',
       eyebrow: 'Safety & Compliance',
       title: 'Operational excellence backed by global standards',
       subtitle: 'Safety-first protocols, certified teams, and rigorous compliance across every operation.',
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       taglineSub: 'Certified Teams Ensuring Operational Excellence'
     },
     {
-      image: 'assets/image/cargoship/WhatsApp Image 2024-02-22 at 13.33.10 (2).jpeg',
+      image: 'assets/image/cargoship/Sirius_Star_2008e.jpg',
       eyebrow: 'Port & Cargo Services',
       title: 'Efficient port turnaround and cargo handling',
       subtitle: 'Streamlined port operations that reduce downtime and keep your schedule on track.',
