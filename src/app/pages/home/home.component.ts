@@ -135,7 +135,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.27 PM.jpeg',
     'assets/image/cargoship/WhatsApp Image 2026-01-27 at 2.14.30 PM.jpeg',
     'assets/image/cargoship/WhatsApp Image 2026-01-30 at 12.05.25 PM.jpeg',
-    'assets/image/cargoship/WhatsApp Image 2026-01-30 at 12.05.26 PM.jpeg'
+    'assets/image/cargoship/WhatsApp Image 2026-01-30 at 12.05.26 PM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-03-11 at 10.00.54 AM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-03-11 at 10.01.00 AM (1).jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-03-11 at 10.01.00 AM.jpeg',
+    'assets/image/cargoship/WhatsApp Image 2026-03-11 at 10.01.31 AM.jpeg'
   ];
 
   testimonials = [
